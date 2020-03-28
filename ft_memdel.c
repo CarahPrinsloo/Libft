@@ -1,9 +1,7 @@
-#include <stdio.h>
-
-void ft_memdel(void **ap)
+void ft_memdel(void **memry)
 {
-    if (ap == NULL)
+    if (memry == NULL)
         return ;
-    free(*ap);
-    *ap = NULL;
+    free(*memry);
+    *memry = NULL;
 }
