@@ -1,11 +1,3 @@
-/******************************************************************************
-
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
-
 int     isDigit(int test)
 {
     if (test > 47 && test < 58)
@@ -26,4 +18,3 @@ int    ft_isalnum(int test)
         return (1);
     return (0);
 }
-
