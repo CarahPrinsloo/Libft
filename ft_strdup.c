@@ -10,7 +10,9 @@ char    *ft_strdup(char *src)
     i = 0;
     while (src[i] != '\0')
         i++;
-    str = (char *)malloc((i + 1) * sizeof(char));
+    str = (char *)malloc(sizeof(char) * (i + 1));
+    if (str == NULL)
+		return (NULL);
     tmp = str;
     i = 0;
     while (src[i] != '\0')
