@@ -1,14 +1,5 @@
 #include <stdlib.h>
-
-int ft_strlen(char *str)
-{
-    int j;
-    
-    j = 0;
-    while (str[j] != '\0')
-        j++;
-    return (j);
-}
+#include <string.h>
 
 char * ft_strjoin(char const *s1, char const *s2)
 {
@@ -21,14 +12,14 @@ char * ft_strjoin(char const *s1, char const *s2)
     j = 0;
     if (s1 == NULL || s2 == NULL)
         return (NULL);
-    len = ft_strlen(s1) + ft_strlen(s2);
+    len = strlen(s1) + strlen(s2);
     cstr = (char *)malloc(sizeof(char) * len + 1);
-    while (i < ft_strlen(s1))
+    while (i < strlen(s1))
     {
         cstr[i] = s1[i];
         i++;
     }
-    while (j < ft_strlen(s2))
+    while (j < strlen(s2))
     {
         cstr[i] = s2[j];
         i++;
