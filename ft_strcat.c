@@ -13,5 +13,6 @@ char *ft_strcat(char *dest, const char *src)
         i++;
         j++;
     }
+    dest[j] = '\0';
     return (dest);
 }
