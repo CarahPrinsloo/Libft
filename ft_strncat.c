@@ -1,27 +1,27 @@
 
 int     str_length(char *str)
 {
-    int length;
-    int index = 0;
+    int i;
     
-    length = 0;
-    while (str[index++])
-        length++;
-    return (length);
+    i = 0;
+    while (str[i] != '\0')
+        i++;
+    return (i);
 }
 
 char *ft_strncat(char *dest, const char *src, size_t n)
 {
-    int index;
-    int size;
+    int i;
+    int j;
     
-    size = str_length(dest);
-    index = 0;
-    while (index < n)
+    j = str_length(dest);
+    i = 0;
+    while (i < n)
     {
-        dest[size] = src[index];
-        size++;
-        index++;
+        dest[j] = src[i];
+        j++;
+        i++;
     }
+    dest[j] = '\0';
     return (dest);
 }
