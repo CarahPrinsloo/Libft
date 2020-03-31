@@ -9,7 +9,7 @@ void *ft_memcpy(void *to, const void *from, size_t numBytes)
     dest = (char*) to;
     word = (char*) from;
     if (numBytes == 0)
-        return (dst);
+        return (dest);
     while (numBytes > 0)
     {
         *dest = *word;
