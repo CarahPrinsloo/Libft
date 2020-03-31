@@ -17,9 +17,8 @@ char * ft_strmapi(char const *s, char(*f)(unsigned int, char))
     char        *cstr;
     
     i = 0;
-    if (str == NULL || f == NULL)
+    if (str == NULL || f == NULL || !(cstr = (char *)malloc(sizeof(char) * ft_strlen(str)+1)))
        return (NULL);
-    cstr = (char *)malloc(sizeof(char) * ft_strlen(str)+1);
     while (str[i] != '\0')
     {
         cstr[i] = f(i, str[i]);
